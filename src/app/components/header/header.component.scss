@@ -1,0 +1,260 @@
+@import "../../../assets/scss/abstracts/mixins";
+@import "../../../assets/scss/abstracts/functions";
+
+header {
+  position: relative;
+
+  .mobile-header-event-title {
+    display: none;
+
+    @include sm {
+      display: flex;
+      justify-content: center;
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 5rem;
+      color: #e8e9ee;
+    }
+  }
+
+  .main-header-gradient {
+    width: 453px;
+    height: 445px;
+    position: absolute;
+    left: -56px;
+    top: 65px;
+    background: linear-gradient(
+      180deg,
+      rgba(127, 28, 252, 0.2) 0%,
+      rgba(89, 220, 220, 0.2) 100%
+    );
+    filter: blur(100px);
+    border-radius: 419.5px;
+    z-index: -150;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  .header-container {
+    position: relative;
+    top: -102.8px;
+
+    @include sm {
+      top: 0;
+    }
+  }
+
+  .main-header-event {
+    font-size: 150px;
+    line-height: 150px;
+    color: #e8e9ee;
+  }
+
+  .main-header-event-title {
+    position: absolute;
+    top: 148px;
+    left: 252px;
+    z-index: 100;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  .main-header-event-year {
+    position: absolute;
+    top: 494px;
+    left: 878px;
+    z-index: 101;
+
+    @include sm {
+      display: none;
+    }
+  }
+
+  .main-header-image__circle {
+    position: absolute;
+    width: 118px;
+    height: 118px;
+    left: 468px;
+    top: 556px;
+    z-index: 150;
+    background: url("../../../assets/images/header/Group\ 27.png");
+
+    @include sm {
+      left: 32px;
+      top: 419px;
+    }
+  }
+
+  .main-header-wrapper {
+    position: relative;
+    padding: 0 185px;
+    position: relative;
+    top: 102.8px;
+
+    @include sm {
+      padding: 0;
+      top: 13px;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 618.6px;
+
+      @include sm {
+        height: 450px;
+        display: flex;
+      }
+    }
+
+    .swiper-slide {
+      height: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+
+      @include sm {
+        text-align: center;
+        width: 345px;
+        margin: 0;
+      }
+
+      &.swiper-slide-active {
+        transform: scale(1.765);
+        z-index: 8;
+
+        @include sm {
+          transform: scale(1.256);
+          z-index: 8;
+        }
+      }
+    }
+
+    .swiper-slide-prev {
+      justify-content: start;
+
+      @include sm {
+        justify-content: end;
+      }
+    }
+
+    .swiper-slide-next,
+    .swiper-slide-duplicate-next {
+      justify-content: end;
+
+      @include sm {
+        justify-content: start;
+      }
+    }
+
+    .header-image-aside-container {
+      width: 249.06px;
+      border-radius: 338.5px;
+
+      .aside-image {
+        object-fit: cover;
+        width: 100%;
+        vertical-align: top;
+      }
+    }
+
+    .header-image-central-container {
+      max-width: 350px;
+      height: auto;
+
+      .central-image {
+        width: 100%;
+        vertical-align: top;
+      }
+    }
+
+    .main-header-images__circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+
+  .main-header__tickets {
+    display: flex;
+    flex-direction: column;
+
+    @include sm {
+      background: transparent;
+      height: auto;
+      margin-bottom: 5rem;
+    }
+
+    span {
+      max-width: 34.9375rem;
+      align-self: center;
+      font-weight: 400;
+      font-size: 9.375rem;
+      line-height: 9.375rem;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: white;
+      color: transparent;
+      position: relative;
+      margin-top: 8rem;
+
+      @include sm {
+        font-size: 80px;
+        font-weight: 400;
+        line-height: 96px;
+        margin-top: 47.86px;
+      }
+    }
+
+    span::before {
+      content: "";
+      z-index: 3;
+      position: absolute;
+      top: 0;
+      right: 50%;
+      bottom: 0;
+      left: 0;
+      box-shadow: inset 200px 0px 100px 0px rgba(0, 0, 0, 0.58);
+      filter: blur(13px);
+      opacity: var(0.7);
+      transition: opacity 0.3s;
+      border-radius: inherit;
+    }
+
+    span::after {
+      content: "";
+      z-index: 3;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      box-shadow: inset -200px 0px 100px 0px rgba(0, 0, 0, 0.58);
+      filter: blur(13px);
+      opacity: var(0.7);
+      transition: opacity 0.3s;
+      border-radius: inherit;
+    }
+
+    .tickets-btn {
+      margin-top: 1.9375rem;
+      min-width: 12.5rem;
+      min-height: 3.125rem;
+    }
+
+    background: linear-gradient(
+        180deg,
+        #0e121b -4.81%,
+        rgba(20, 27, 41, 0) 54.92%
+      ),
+      linear-gradient(180deg, #0e121b -5.91%, rgba(20, 27, 41, 0.76) 113.13%),
+      url("../../../assets/images/header/Rectangle7.png") center/cover no-repeat
+        border-box;
+    width: 100%;
+    height: 28.5625rem;
+  }
+}

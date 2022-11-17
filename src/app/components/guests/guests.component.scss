@@ -1,0 +1,141 @@
+@import "../../../assets/scss/abstracts/functions";
+@import "../../../assets/scss/abstracts/vars";
+@import "../../../assets/scss/abstracts/mixins";
+
+.main-guests-container {
+  padding: 0 48px 0 115px;
+ 
+  @include sm {
+    padding: 0;
+  }
+}
+
+.main-guests__slider {
+  @include sm {
+    display: none;
+  }
+}
+.swiper-container {
+  width: 99%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 70px;
+  height: 70px;
+  background: #1D1E22;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  border-radius: 50%;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next:after  {
+  content: url(../../../assets/images/guests/bi_arrow-right.png);
+  transform: rotate(180deg);
+}
+
+.swiper-button-prev:after {
+  content: url(../../../assets/images/guests/bi_arrow-right.png);
+}
+
+.guest-header {
+  padding-left: 35px;
+
+  @include sm {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+
+.main-guest-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 23.9375rem;
+  height: 33.125rem;
+  background-color: color-function(card-background);
+  border-radius: 30px;
+
+  @include sm {
+    max-width: 19.6875rem;
+    margin-bottom: 45px;
+  }
+
+  .main-guest-card__image__container {
+    width: 100%;
+    height: auto;
+    max-width: 23.9375rem;
+
+    .main-guest-card__image {
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+
+  .main-guest-card__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .main-guest-card__info__container {
+      display: flex;
+      flex-direction: column;
+
+      .main-guest-card__name {
+        margin-bottom: 1rem;
+        font-family: $font-stack-card;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.8125rem;
+        letter-spacing: 0.04em;
+      }
+
+      .main-guest-card__speciality {
+        text-align: center;
+        letter-spacing: 0.04em;
+        line-height: 1.2rem;
+      }
+    }
+  }
+}
+
+.main-guests-container-mobile {
+  display: none;
+
+  @include sm {
+    display: block;
+    margin-bottom: 3.1325rem;
+
+    .swiper {
+      width: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      width: auto;
+    }
+
+    .swiper-pagination-bullet {
+      width: 16px;
+      height: 16px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: linear-gradient(180deg, #7f1cfc 0%, #ff1c60 100%);
+    }
+  }
+}

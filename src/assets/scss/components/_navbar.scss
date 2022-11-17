@@ -1,0 +1,99 @@
+.main-header-wrapper-navbar {
+  display: flex;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 44px 150px 106px 150px;
+
+  @include sm {
+    padding: 47px 29px 35px 29px;
+  }
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @include sm {
+    display: none;
+  }
+
+  .main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+}
+
+.main-nav__item {
+  font-family: $font-stack-card;
+  margin: 0 1.125rem;
+  cursor: pointer;
+  font-size: font-size-function(font-size-sm);
+  font-weight: 400;
+  display: flex;
+  flex-wrap: nowrap;
+  color: #b7c1d8;
+  line-height: 21.78px;
+}
+
+.main-nav__item-contact {
+  margin-right: 0;
+}
+
+.main-nav__item-contact a {
+  min-width: 9.0625rem;
+  background: linear-gradient(273.31deg, #7f1cfc 0.79%, #ff1c60 98.6%);
+  padding: 0.8125rem 1.25rem;
+  border-radius: 3.125rem;
+  color: color-function(white);
+}
+
+.main-header-brand {
+  display: flex;
+  flex-direction: column;
+  min-width: 19.0625rem;
+}
+.main-header-brand__title {
+  font-family: $font-stack-logo;
+  font-size: font-size-function(font-size-logo-brand);
+  color: color-function(header-text);
+}
+
+.mobile-nav {
+
+  display: none;
+
+  @include sm {
+    display: flex;
+  }
+
+  .mobile-nav-wrapper {
+    display: flex;
+  }
+
+  .toggle-button {
+    min-width: 1.5625rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 0;
+    vertical-align: middle;
+  }
+
+  .toggle-button:focus {
+    outline: none;
+  }
+
+  .toggle-button__bar {
+    width: 100%;
+    height: 0.104rem;
+    background: color-function(white);
+    display: block;
+    margin: 0.416875rem 0;
+  }
+}

@@ -1,0 +1,49 @@
+<header>
+  <app-navbar></app-navbar>
+  <div class="header-container">
+    <span class="main-header-event-title main-header-event">Event</span>
+    <span class="main-header-event-year main-header-event">2022</span>
+    <div class="main-header-image__circle"></div>
+
+    <div class="mobile-header-event-title">
+      <span>Event 2022</span>
+    </div>
+    <div class="main-header-gradient"></div>
+    <section class="main-header-wrapper">
+      <swiper #swiper [config]="config">
+        <ng-template swiperSlide>
+          <div class="header-image-aside-container">
+            <img
+              src="../../../assets/images/header/Group 12.png"
+              alt=""
+              class="aside-image"
+            />
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="header-image-aside-container">
+            <img
+              src="../../../assets/images/header/Group 7.png"
+              alt=""
+              class="aside-image"
+            />
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="header-image-aside-container">
+            <img
+              src="../../../assets/images/header/Group 8.png"
+              alt=""
+              class="aside-image"
+            />
+          </div>
+        </ng-template>
+      </swiper>
+    </section>
+
+    <div class="main-header__tickets">
+      <span>all are eco</span>
+      <button class="card-feature__button tickets-btn">BUY TICKET</button>
+    </div>
+  </div>
+</header>

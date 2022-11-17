@@ -1,0 +1,18 @@
+@import "../abstracts/colors";
+
+
+@function color-function($color) {
+  @if map-has-key($colors, $color) {
+    @return map-get($colors, $color);
+  }
+  @return null;
+}
+
+
+@function font-size-function($font-size-type) {
+  @if map-has-key($font-size, $font-size-type) {
+    @return map-get($font-size, $font-size-type);
+  }
+  @return null;
+}
+

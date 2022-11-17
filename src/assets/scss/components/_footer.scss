@@ -1,0 +1,159 @@
+.main-footer {
+  padding: 92px 150px 29px 150px;
+  color: color-function(white);
+
+  @include sm {
+    padding: 0 0 29px 0;
+  }
+
+  .main-footer-nav {
+    display: flex;
+  }
+
+  .main-footer-navbar {
+    display: flex;
+    justify-content: space-between;
+
+    @include sm {
+      flex-direction: column;
+    }
+  }
+
+  .main-footer-nav__items {
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+
+  }
+
+  .footer-brand {
+    margin-bottom: 26px;
+    
+    @include sm {
+      align-items: center;
+    }
+
+  }
+
+  .footer-nav_item:nth-child(1) {
+    margin-left: 0;
+  }
+
+  .footer-nav_item {
+    margin: 0 24px;
+    color: inherit;
+
+    @include sm {
+      margin: 24px 0 0 0;
+    }
+  }
+
+  .main-footer__newsletter {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+      letter-spacing: 0.02em;
+
+      @include sm {
+        align-self: center;
+        margin-top: 60px;
+      }
+    }
+
+    .main-footer__newsletter__subscribe {
+      margin-top: 22px;
+
+      @include sm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      input {
+        min-width: 226px;
+        min-height: 46px;
+        padding-left: 14px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+        border-radius: 30px;
+        margin-right: 1rem;
+
+        @include sm {
+          max-width: 226px;
+          margin: 0 0 1rem 0;
+        }
+      }
+
+      .footer-subscribe-btn {
+        min-width: 145px;
+        min-height: 45px;
+        text-transform: none;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 19px;
+        text-align: center;
+      }
+    }
+  }
+
+  .main-footer-divider {
+    margin: 1.8125rem 0 1.875rem 0;
+    border: 1px solid color-function(divider);
+  }
+
+  .main-footer-rights {
+    display: flex;
+    font-size: 0.875rem;
+    font-family: $font-stack-card;
+
+    span {
+      min-width: 255px;
+      font-family: $font-stack-card;
+      line-height: 24px;
+
+      @include sm {
+        align-self: center;
+        text-align: center;
+      }
+    }
+
+    .footer-rights__nav {
+
+      display: flex;
+      justify-content: end;
+
+      .footer-rights-nav_item {
+        font-size: inherit;
+        color: inherit;
+        margin: 0 1.3125rem;
+      }
+
+      .footer-rights-nav_item:nth-child(3) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include sm {
+    .main-footer-rights {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+
+      .footer-rights__nav {
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+
+      .footer-rights-nav_item:nth-child(1) {
+        margin-left: 0;
+      }
+    }
+  }
+}

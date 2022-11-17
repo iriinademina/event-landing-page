@@ -1,0 +1,134 @@
+<section class="main-guests-container">
+  <h2 class="main-category-header guest-header">our guest</h2>
+  <div class="main-guests__slider">
+    <swiper
+      class="swiper-container"
+      [slidesPerView]="'auto'"
+      [spaceBetween]="30"
+      [slideToClickedSlide]="true"
+      [navigation]="true"
+      [freeMode]="false"
+      [loop]="true"
+      [centeredSlides]="true"
+    >
+      <ng-template swiperSlide>
+        <div class="main-guest-card">
+          <div class="main-guest-card__image__container">
+            <img
+              src="../../../assets/images/guests/Rectangle 7.png"
+              alt=""
+              class="main-guest-card__image"
+            />
+          </div>
+          <div class="main-guest-card__info">
+            <div class="main-guest-card__info__container">
+              <span class="main-guest-card__name">Methew smith</span>
+              <span class="main-guest-card__speciality">Compositon Artist</span>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="main-guest-card">
+          <div class="main-guest-card__image__container">
+            <img
+              src="../../../assets/images/guests/Rectangle 7 (1).png"
+              alt=""
+              class="main-guest-card__image"
+            />
+          </div>
+          <div class="main-guest-card__info">
+            <div class="main-guest-card__info__container">
+              <span class="main-guest-card__name">Javin Aleen</span>
+              <span class="main-guest-card__speciality">Singer</span>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="main-guest-card">
+          <div class="main-guest-card__image__container">
+            <img
+              src="../../../assets/images/guests/Rectangle 7 (2).png"
+              alt=""
+              class="main-guest-card__image"
+            />
+          </div>
+          <div class="main-guest-card__info">
+            <div class="main-guest-card__info__container">
+              <span class="main-guest-card__name">Alex John</span>
+              <span class="main-guest-card__speciality">Singer</span>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+</section>
+
+<section class="main-guests-container-mobile">
+  <swiper
+    [slidesPerView]="'auto'"
+    [spaceBetween]="20"
+    [slideToClickedSlide]="true"
+    [pagination]="{
+      clickable: true
+    }"
+    [freeMode]="false"
+    [loop]="true"
+    [autoHeight]="true"
+    [centeredSlides]="true"
+  >
+    <ng-template swiperSlide>
+      <div class="main-guest-card">
+        <div class="main-guest-card__image__container">
+          <img
+            src="../../../assets/images/guests/Rectangle 7.png"
+            alt=""
+            class="main-guest-card__image"
+          />
+        </div>
+        <div class="main-guest-card__info">
+          <div class="main-guest-card__info__container">
+            <span class="main-guest-card__name">Methew smith</span>
+            <span class="main-guest-card__speciality">Compositon Artist</span>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="main-guest-card">
+        <div class="main-guest-card__image__container">
+          <img
+            src="../../../assets/images/guests/Rectangle 7 (1).png"
+            alt=""
+            class="main-guest-card__image"
+          />
+        </div>
+        <div class="main-guest-card__info">
+          <div class="main-guest-card__info__container">
+            <span class="main-guest-card__name">Javin Aleen</span>
+            <span class="main-guest-card__speciality">Singer</span>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="main-guest-card">
+        <div class="main-guest-card__image__container">
+          <img
+            src="../../../assets/images/guests/Rectangle 7 (2).png"
+            alt=""
+            class="main-guest-card__image"
+          />
+        </div>
+        <div class="main-guest-card__info">
+          <div class="main-guest-card__info__container">
+            <span class="main-guest-card__name">Alex John</span>
+            <span class="main-guest-card__speciality">Singer</span>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </swiper>
+</section>

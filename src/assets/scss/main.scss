@@ -1,0 +1,71 @@
+@import "./abstracts/colors";
+@import "./abstracts/functions";
+@import "./abstracts/vars";
+@import "./abstracts/mixins";
+@import "./components/navbar";
+@import "./components/header";
+@import "./components/main-features";
+@import "./components/partners";
+@import "./components/blog";
+@import "./components/footer";
+
+html {
+  overflow-x: hidden;
+} 
+
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: color-function(main-background);
+  color: color-function(white);
+  font-family: $font-stack-main;
+  font-weight: 400;
+}
+
+.main-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-category-header {
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 3.75rem;
+  line-height: 4.5rem;
+  color: color-function(header-text);
+
+  @include sm {
+    text-align: center;
+    font-size: font-size-function(font-size-xxxl);
+    line-height: 2.25rem;
+    margin-bottom: 2.5rem;
+   }
+  
+}
+
+.card-feature__button {
+  color: color-function(white);
+  min-width: 250px;
+  min-height: 50px;
+  background: linear-gradient(273.31deg, #7f1cfc 0.79%, #ff1c60 98.6%);
+  border-radius: 50px;
+  font-size: 1.125rem;
+  width: max-content;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  line-height: 1.36125rem;
+  align-self: center;
+  text-transform: uppercase;
+  font-family: $font-stack-card;
+}
+
+.bottom-container {
+  background-color: color-function(card-background);
+}

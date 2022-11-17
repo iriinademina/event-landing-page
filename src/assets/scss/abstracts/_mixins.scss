@@ -1,0 +1,10 @@
+@mixin sm() {
+    @media screen and (max-width: 480px) {
+      @content;
+    }
+  }
+
+  @mixin scale( $scale: 1.5, $margin: 2) {
+    margin: 0 $scale * $margin * 1px;
+    transform: scale($scale);
+ }
